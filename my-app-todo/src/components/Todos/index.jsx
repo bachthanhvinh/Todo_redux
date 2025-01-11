@@ -4,9 +4,11 @@ import { TodoList } from "./todoList";
 function Todos() {
   return (
     <>
-      <h1>TODOS</h1>
-      <TodoInput />
-      <TodoList />
+      <div className="product__list">
+        <h1>TODO</h1>
+        <TodoInput />
+        <TodoList />
+      </div>
     </>
   );
 }

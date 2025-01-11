@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import todoReduces from "./todos";
+import todoReduce from "./todos";
 
 const allReducers = combineReducers({
-  todoReduces,
+  todoReduce,
   // nhiều phần sử lý ở đây
 });
 
