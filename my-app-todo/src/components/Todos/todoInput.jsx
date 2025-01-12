@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { createTodo } from "../../action/todos";
 import { useEffect, useRef } from "react";
 
-export const TodoInput = () => {
+function TodoInput() {
   const dispatch = useDispatch();
 
   const inputFocus = useRef();
@@ -24,11 +24,18 @@ export const TodoInput = () => {
   return (
     <>
       <form onSubmit={HandleSubmit}>
-        <input ref={inputFocus} type="text" name="todoInput" />
+        <input
+          ref={inputFocus}
+          type="text"
+          name="todoInput"
+          className="product__input"
+        />
         <button type="submit" className="createtodo">
           <FaPlus />
         </button>
       </form>
     </>
   );
-};
+}
+
+export default TodoInput;
