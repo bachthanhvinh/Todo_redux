@@ -16,9 +16,6 @@
     align-items: center;
     border-radius: 5px;
     font-size: 18px;
-    &--completed {
-      text-decoration: line-through;
-    }
   }
   &__icons {
     display: flex;
@@ -35,14 +32,12 @@
       align-items: center;
       cursor: pointer;
       transition: 0.5s;
-
       &:hover {
         color: black;
       }
     }
   }
 }
-
 form {
   display: flex;
   justify-content: space-between;
