@@ -1,4 +1,4 @@
-import { TodoInput } from "./todoInput";
+import { TodoInput } from "./TodoInput";
 import { TodoList } from "./todoList";
 
 function Todos() {

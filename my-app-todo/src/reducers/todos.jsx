@@ -17,8 +17,21 @@ const init = [
 ];
 
 const todoReduce = (state = init, action) => {
-  // console.log(state, action);
-  return state;
+  let newState = [...state];
+  switch (action.type) {
+    case "CREATETODO":
+      newState = [
+        ...state,
+        {
+          id: Date.now(),
+          content: action.content,
+        },
+      ];
+
+      return newState;
+    default:
+      return state;
+  }
 };
 
 export default todoReduce;
