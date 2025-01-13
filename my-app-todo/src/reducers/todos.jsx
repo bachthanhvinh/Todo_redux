@@ -2,7 +2,7 @@ const init = [
   {
     id: 1,
     content: "Công việc 1",
-    completed: true,
+    completed: false,
   },
   {
     id: 2,
@@ -42,6 +42,9 @@ const todoReduce = (state = init, action) => {
       });
       newState[undoindex].completed = false;
       return newState;
+    case "HANDLEDELETE":
+      const deleteIndex = newState.filter((item) => item.id !== action.id);
+      return deleteIndex;
     default:
       return state;
   }

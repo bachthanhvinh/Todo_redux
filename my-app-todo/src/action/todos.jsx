@@ -18,3 +18,9 @@ export const undoHandle = (id) => {
     type: "UNDOHANDLE",
   };
 };
+export const handleDelete = (id) => {
+  return {
+    id: id,
+    type: "HANDLEDELETE",
+  };
+};

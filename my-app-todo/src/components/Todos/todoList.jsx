@@ -1,14 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./TodoStyle.scss";
 import { FaCheck, FaUniregistry, FaX } from "react-icons/fa6";
-import { todoHandle, undoHandle } from "../../action/todos";
+import { handleDelete, todoHandle, undoHandle } from "../../action/todos";
 
 function TodoList() {
   const todos = useSelector((state) => state.todoReduce);
-  if (!Array.isArray(todos)) {
-    console.error("Todos is not an array:", todos);
-    return <p>Loading todos...</p>;
-  }
   console.log(todos);
   const dispatch = useDispatch();
   return (
@@ -32,7 +28,7 @@ function TodoList() {
               </button>
             )}
 
-            <button>
+            <button onClick={() => dispatch(handleDelete(item.id))}>
               <FaX />
             </button>
           </div>
